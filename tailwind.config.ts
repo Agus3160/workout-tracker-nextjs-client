@@ -8,10 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes:{
+        "bounce-slow":{
+          "0%":{transform:"translateY(0px)"},
+          "50%":{transform:"translateY(8px)"},
+          "100%":{transform:"translateY(0px)"},
+        }
       },
+      animation:{
+        "bounce-slow": "bounce-slow 3s infinite",
+      }
     },
   },
   plugins: [],
